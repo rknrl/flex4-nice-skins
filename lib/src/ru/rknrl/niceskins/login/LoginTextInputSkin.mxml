@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<niceskins:TextInputSkin xmlns:fx="http://ns.adobe.com/mxml/2009"
+                         xmlns:niceskins="ru.rknrl.niceskins.*">
+    <fx:Script><![CDATA[
+        override public function get fontSize():int {
+            return 18;
+        }
+
+        override public function get padding():int {
+            return 15;
+        }
+
+        override public function get lineWeight():int {
+            return 2;
+        }
+        ]]></fx:Script>
+</niceskins:TextInputSkin>

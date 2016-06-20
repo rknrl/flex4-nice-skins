@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:login="ru.rknrl.niceskins.login.*"
+               applicationDPI="120"
+               creationComplete="onCreationComplete(event)">
+
+    <fx:Style source="niceskins.css"/>
+
+    <fx:Script><![CDATA[
+        import mx.events.FlexEvent;
+
+        private static const objects:Array = createObjects();
+
+        private static function createObjects():Array {
+            const arr:Array = [];
+            for (var i:int = 0; i < 30; i++) {
+                arr.push({
+                    name: "name" + i,
+                    value: i
+                })
+            }
+            return arr;
+        }
+
+        private function onCreationComplete(event:FlexEvent):void {
+            loginView.okButton.addEventListener(MouseEvent.CLICK, onClick);
+            loginVisible = true;
+        }
+
+        private function onClick(event:MouseEvent):void {
+            loginVisible = false;
+        }
+
+        private function set loginVisible(value:Boolean):void {
+            loginView.includeInLayout = loginView.visible = value;
+            group.includeInLayout = group.visible = !value;
+        }
+        ]]></fx:Script>
+
+    <login:LoginView id="loginView" width="100%" height="100%"/>
+
+    <s:VGroup id="group" width="100%" height="100%" padding="10">
+
+        <s:Form width="100%">
+            <s:FormItem label="Name:">
+                <s:HGroup verticalAlign="middle">
+                    <s:TextInput width="200" prompt="Enter text"/>
+                    <s:CheckBox label="Check Me" selected="true"/>
+                </s:HGroup>
+            </s:FormItem>
+
+            <s:FormItem label="Value:">
+                <s:DropDownList selectedIndex="0">
+                    <s:dataProvider>
+                        <s:ArrayList>
+                            <fx:Array>
+                                <fx:String>Item 1</fx:String>
+                                <fx:String>Item 2</fx:String>
+                                <fx:String>Item 3</fx:String>
+                                <fx:String>Item 4</fx:String>
+                            </fx:Array>
+                        </s:ArrayList>
+                    </s:dataProvider>
+                </s:DropDownList>
+            </s:FormItem>
+        </s:Form>
+
+        <s:HGroup width="100%">
+            <s:Spacer width="100%"/>
+            <s:Button label="Say Hello" click="loginVisible = true"/>
+            <s:Button label="Say Hello" color="green"/>
+            <s:Button label="Say Hello" color="blue"/>
+        </s:HGroup>
+
+        <s:DataGrid width="100%" height="100%">
+            <s:columns>
+                <s:ArrayList>
+                    <s:GridColumn headerText="Name" dataField="name"/>
+                    <s:GridColumn headerText="Value" dataField="value" sortable="true"/>
+                </s:ArrayList>
+            </s:columns>
+            <s:dataProvider>
+                <s:ArrayCollection source="{objects}"/>
+            </s:dataProvider>
+        </s:DataGrid>
+
+    </s:VGroup>
+
+</s:Application>

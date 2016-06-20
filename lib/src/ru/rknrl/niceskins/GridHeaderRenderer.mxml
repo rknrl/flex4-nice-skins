@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:GridItemRenderer minWidth="21" minHeight="40"
+                    xmlns:fx="http://ns.adobe.com/mxml/2009"
+                    xmlns:s="library://ns.adobe.com/flex/spark">
+
+    <s:states>
+        <s:State name="normal"/>
+        <s:State name="hovered"/>
+        <s:State name="down"/>
+    </s:states>
+
+    <s:Rect left="0" right="-1" top="0" bottom="0">
+        <s:fill>
+            <s:SolidColor color="0xf5f5ea"/>
+        </s:fill>
+    </s:Rect>
+
+    <s:HGroup left="7" right="7" top="5" bottom="5" gap="2" verticalAlign="middle">
+        <s:Label id="labelDisplay"
+                 top="0" bottom="0"
+                 textAlign="start"
+                 fontWeight="bold"
+                 verticalAlign="middle"
+                 maxDisplayedLines="1"
+                 showTruncationTip="true"/>
+
+        <s:Group includeInLayout="{column.sortable}"
+                 visible="{column.sortable}">
+            <s:Path id="arrow" data="M 0 0 L 3 3 L 6 0 Z"
+                    verticalCenter="-5"
+                    scaleY="{column.sortDescending ? 1 : -1}">
+                <s:fill>
+                    <s:SolidColor color="0"/>
+                </s:fill>
+            </s:Path>
+        </s:Group>
+    </s:HGroup>
+
+</s:GridItemRenderer>

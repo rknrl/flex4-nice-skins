@@ -1,0 +1,53 @@
+@namespace s "library://ns.adobe.com/flex/spark";
+
+s|Application {
+    fontFamily: Helvetica, Arial, "_sans";
+    fontSize: 12;
+}
+
+s|Button {
+    skinClass: ClassReference("ru.rknrl.niceskins.ButtonSkin");
+    fontSize: 12;
+}
+
+s|TextInput {
+    skinClass: ClassReference("ru.rknrl.niceskins.TextInputSkin");
+    fontSize: 12;
+}
+
+s|DataGrid {
+    skinClass: ClassReference("ru.rknrl.niceskins.DataGridSkin");
+    fontSize: 12;
+}
+
+s|DropDownList {
+    skinClass: ClassReference("ru.rknrl.niceskins.DropDownListSkin");
+    fontSize: 12;
+}
+
+s|CheckBox {
+    skinClass: ClassReference("ru.rknrl.niceskins.CheckBoxSkin");
+    fontSize: 12;
+}
+
+s|Form {
+    skinClass: ClassReference("ru.rknrl.niceskins.FormSkin");
+    fontSize: 12;
+}
+
+s|FormItem {
+    skinClass: ClassReference("ru.rknrl.niceskins.FormItemSkin");
+    fontSize: 12;
+}
+
+s|Scroller {
+    skinClass: ClassReference("ru.rknrl.niceskins.ScrollerSkin");
+}
+
+s|HScrollBar {
+    skinClass: ClassReference("ru.rknrl.niceskins.HScrollBarSkin");
+}
+
+s|VScrollBar {
+    skinClass: ClassReference("ru.rknrl.niceskins.VScrollBarSkin");
+}
