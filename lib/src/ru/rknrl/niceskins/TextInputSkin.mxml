@@ -31,7 +31,7 @@
         </s:stroke>
 
         <s:fill>
-            <s:SolidColor id="bgFill" color="0xfcfcfc"/>
+            <s:SolidColor id="bgFill" color="white"/>
         </s:fill>
     </s:Rect>
 

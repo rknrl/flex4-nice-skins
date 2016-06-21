@@ -1,4 +1,5 @@
 @namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
 
 s|Application {
     fontFamily: Helvetica, Arial, "_sans";
@@ -55,4 +56,18 @@ s|HScrollBar {
 
 s|VScrollBar {
     skinClass: ClassReference("ru.rknrl.niceskins.VScrollBarSkin");
+}
+
+mx|DateField {
+    textInputStyleName: "dateFieldTextInput";
+}
+
+.dateFieldTextInput {
+    fontFamily: Helvetica, Arial, "_sans";
+    borderSkin: ClassReference("ru.rknrl.niceskins.DateFieldTextInputBorderSkin");
+    fontSize: 12;
+    paddingRight: 10;
+    paddingLeft: 10;
+    paddingTop: 10;
+    paddingBottom: 8;
 }

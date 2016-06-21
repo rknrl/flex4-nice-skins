@@ -69,7 +69,7 @@
             </s:FormItem>
 
             <s:FormItem label="Date:">
-                <mx:DateField/>
+                <mx:DateField data="{new Date()}"/>
             </s:FormItem>
         </s:Form>
 
@@ -83,7 +83,7 @@
         <s:DataGrid width="100%" height="100%">
             <s:columns>
                 <s:ArrayList>
-                    <s:GridColumn headerText="Name" dataField="name"/>
+                    <s:GridColumn headerText="Name" dataField="name" sortable="false"/>
                     <s:GridColumn headerText="Value" dataField="value" sortable="true"/>
                 </s:ArrayList>
             </s:columns>

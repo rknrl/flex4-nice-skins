@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+    <s:Rect left="0" right="0" top="0" bottom="0" id="border" radiusX="3">
+        <s:stroke>
+            <s:SolidColorStroke id="borderStroke" weight="1" color="0xe7e7e7"/>
+        </s:stroke>
+
+        <s:fill>
+            <s:SolidColor id="bgFill" color="white"/>
+        </s:fill>
+    </s:Rect>
+</s:Skin>
