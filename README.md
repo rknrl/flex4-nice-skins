@@ -6,8 +6,8 @@
 
 Usage:
 
-* Link library flex4-nice-skins.swc to your project
-* Copy niceskins.css to source folder
+* Link library `lib/bin/flex4-nice-skins.swc` to your project
+* Mark `lib/css/` folder as source folder in your project
 * Add line `<fx:Style source="niceskins.css"/>` to main mxml file
 
 Supported controls:

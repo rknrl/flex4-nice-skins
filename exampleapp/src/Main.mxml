@@ -4,7 +4,7 @@
                applicationDPI="120"
                creationComplete="onCreationComplete(event)">
 
-    <fx:Style source="niceskins.css"/>
+    <fx:Style source="../../lib/css/niceskins.css"/>
 
     <fx:Script><![CDATA[
         import mx.events.FlexEvent;
@@ -34,6 +34,9 @@
         private function set loginVisible(value:Boolean):void {
             loginView.includeInLayout = loginView.visible = value;
             group.includeInLayout = group.visible = !value;
+        }
+
+        private function showPopup():void {
         }
         ]]></fx:Script>
 
@@ -76,7 +79,7 @@
         <s:HGroup width="100%">
             <s:Spacer width="100%"/>
             <s:Button label="Say Hello" click="loginVisible = true"/>
-            <s:Button label="Say Hello" color="green"/>
+            <s:Button label="Say Hello" color="green" click="showPopup()"/>
             <s:Button label="Say Hello" color="blue"/>
         </s:HGroup>
 
