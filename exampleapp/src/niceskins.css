@@ -15,6 +15,11 @@ s|TextInput {
     fontSize: 12;
 }
 
+s|NumericStepper {
+    skinClass: ClassReference("ru.rknrl.niceskins.NumericStepperSkin");
+    fontSize: 12;
+}
+
 s|DataGrid {
     skinClass: ClassReference("ru.rknrl.niceskins.DataGridSkin");
     fontSize: 12;

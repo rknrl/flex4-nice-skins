@@ -18,6 +18,7 @@ Supported controls:
 * Form
 * Scroller
 * TextInput
+* NumericStepper
 
 ![Controls](controls.jpg)
 
