@@ -3,7 +3,7 @@
   <component name="FlexBuildConfigurationManager" active="lib-desktop">
     <configurations>
       <configuration name="lib-desktop" output-type="Library" output-file="flex4-nice-skins-desktop.swc" output-folder="$MODULE_DIR$/bin">
-        <dependencies target-player="20.0">
+        <dependencies target-player="20.0" framework-linkage="Merged">
           <entries>
             <entry module-name="lib-base" build-configuration-name="lib-base">
               <dependency linkage="Merged" />

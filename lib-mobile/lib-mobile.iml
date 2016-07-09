@@ -3,7 +3,7 @@
   <component name="FlexBuildConfigurationManager" active="lib-mobile">
     <configurations>
       <configuration name="lib-mobile" target-platform="Mobile" output-type="Library" output-file="flex4-nice-skins-mobile.swc" output-folder="$MODULE_DIR$/bin">
-        <dependencies target-player="21.0">
+        <dependencies target-player="21.0" framework-linkage="Merged">
           <entries>
             <entry module-name="lib-base" build-configuration-name="lib-base">
               <dependency linkage="Merged" />

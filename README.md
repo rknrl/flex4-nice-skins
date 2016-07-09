@@ -6,8 +6,8 @@
 
 Usage:
 
-* Link library `lib/bin/flex4-nice-skins.swc` to your project
-* Link library `lib/bin/flex4-nice-skins-desktop.swc` or `lib/bin/flex4-nice-skins-mobile.swc` to your project
+* Link (Merge) library `lib/bin/flex4-nice-skins.swc` to your project
+* Link (Include) library `lib/bin/flex4-nice-skins-desktop.swc` or `lib/bin/flex4-nice-skins-mobile.swc` to your project 
 * Mark `lib/css/` folder as source folder in your project
 * Add line `<fx:Style source="niceskins.css"/>` to main mxml file
 
