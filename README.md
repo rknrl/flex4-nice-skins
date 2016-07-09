@@ -7,6 +7,7 @@
 Usage:
 
 * Link library `lib/bin/flex4-nice-skins.swc` to your project
+* Link library `lib/bin/flex4-nice-skins-desktop.swc` or `lib/bin/flex4-nice-skins-mobile.swc` to your project
 * Mark `lib/css/` folder as source folder in your project
 * Add line `<fx:Style source="niceskins.css"/>` to main mxml file
 
@@ -29,3 +30,5 @@ Bonus:
 * LoginView
 
 ![Login](login.jpg)
+
+Разделение не desktop и mobile сделано, потому что стандартный TextInput не работает в некоторых андроидах (не работает backspace, дублируются символы при restricts)

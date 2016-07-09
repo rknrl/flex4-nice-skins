@@ -18,18 +18,18 @@
 
             <s:TextInput id="loginTextInput"
                          prompt="{loginPromptText}"
-                         skinClass="ru.rknrl.niceskins.login.LoginTextInputSkin"
+                         skinClass="{getDefinitionByName('ru.rknrl.niceskins.login.LoginTextInputSkin') as Class}"
                          width="100%"/>
 
             <s:TextInput id="passwordTextInput"
                          prompt="{passwordPromptText}"
                          width="100%"
-                         skinClass="ru.rknrl.niceskins.login.LoginTextInputSkin"
+                         skinClass="{getDefinitionByName('ru.rknrl.niceskins.login.LoginTextInputSkin') as Class}"
                          displayAsPassword="true"/>
 
             <s:TextInput id="hostTextInput"
                          prompt="{hostPromptText}"
-                         skinClass="ru.rknrl.niceskins.login.LoginTextInputSkin"
+                         skinClass="{getDefinitionByName('ru.rknrl.niceskins.login.LoginTextInputSkin') as Class}"
                          width="100%"/>
 
             <s:Button id="okButton"

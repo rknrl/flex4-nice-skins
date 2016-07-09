@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<s:SparkSkin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+             minHeight="23" minWidth="40"
+             alpha.disabled="0.3">
+
+    <fx:Metadata>[HostComponent("spark.components.NumericStepper")]</fx:Metadata>
+
+    <s:states>
+        <s:State name="normal"/>
+        <s:State name="disabled"/>
+    </s:states>
+
+    <s:Rect left="0" right="0" top="0" bottom="0" id="border" radiusX="3">
+        <s:stroke>
+            <s:SolidColorStroke id="borderStroke" weight="1" color="0xe7e7e7"/>
+        </s:stroke>
+
+        <s:fill>
+            <s:SolidColor id="bgFill" color="white"/>
+        </s:fill>
+    </s:Rect>
+
+    <s:Button id="incrementButton" width="18" right="0" top="0" height="50%" tabEnabled="false"
+              skinClass="ru.rknrl.niceskins.NumericStepperIncrementButtonSkin"/>
+
+    <s:Button id="decrementButton" width="18" right="0" bottom="0" height="50%" tabEnabled="false"
+              skinClass="ru.rknrl.niceskins.NumericStepperDecrementButtonSkin"/>
+
+    <s:TextInput id="textDisplay" left="0" top="0" right="18" bottom="0"
+                 skinClass="ru.rknrl.niceskins.NumericStepperTextInputSkin"/>
+
+</s:SparkSkin>

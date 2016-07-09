@@ -4,7 +4,7 @@
                applicationDPI="120"
                creationComplete="onCreationComplete(event)">
 
-    <fx:Style source="../../lib/css/niceskins.css"/>
+    <fx:Style source="niceskins.css"/>
 
     <fx:Script><![CDATA[
         import mx.events.FlexEvent;
