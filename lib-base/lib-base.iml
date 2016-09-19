@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="lib-base">
     <configurations>
-      <configuration name="lib-base" output-type="Library" output-file="flex4-nice-skins.swc" output-folder="$MODULE_DIR$/../lib/bin">
+      <configuration name="lib-base" output-type="Library" output-file="flex4-nice-skins.swc" output-folder="$MODULE_DIR$/bin">
         <dependencies target-player="20.0" framework-linkage="Merged">
           <sdk name="flex" />
         </dependencies>

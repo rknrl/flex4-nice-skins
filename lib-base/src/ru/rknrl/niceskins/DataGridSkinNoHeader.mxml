@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<niceskins:DataGridSkin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:niceskins="ru.rknrl.niceskins.*">
+    <fx:Script><![CDATA[
+        override public function get headerVisible():Boolean {
+            return false;
+        }
+        ]]></fx:Script>
+</niceskins:DataGridSkin>
