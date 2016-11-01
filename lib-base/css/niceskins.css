@@ -15,6 +15,7 @@ s|TextInput {
     skinClass: ClassReference("ru.rknrl.niceskins.TextInputSkin");
     fontSize: 12;
     fontFamily: Helvetica, Arial, "_sans";
+    showPromptWhenFocused: false;
 }
 
 s|NumericStepper {
