@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SparkSkin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+             alpha.disabledStates="0.3">
+
+    <fx:Metadata>[HostComponent("spark.components.TextInput")]</fx:Metadata>
+
+    <fx:Script><![CDATA[
+        public function get fontSize():int {
+            return 12;
+        }
+
+        public function get padding():int {
+            return 10;
+        }
+
+        public function get lineWeight():int {
+            return 1;
+        }
+        ]]></fx:Script>
+
+    <s:states>
+        <s:State name="normal"/>
+        <s:State name="disabled" stateGroups="disabledStates"/>
+        <s:State name="normalWithPrompt"/>
+        <s:State name="disabledWithPrompt" stateGroups="disabledStates"/>
+    </s:states>
+
+    <s:Line left="0" right="0" bottom="0">
+        <s:stroke>
+            <s:SolidColorStroke weight="1" color="0xb2b2b2"/>
+        </s:stroke>
+    </s:Line>
+
+    <s:RichEditableText id="textDisplay"
+                        verticalAlign="middle"
+                        widthInChars="10"
+                        color="black" fontSize="{fontSize}" fontStyle="normal"
+                        left="{padding}" right="{padding}" paddingTop="{padding}" paddingBottom="{padding}"/>
+
+    <s:Label id="promptDisplay" maxDisplayedLines="1"
+             verticalAlign="middle"
+             color="gray" fontSize="{fontSize}" fontStyle="normal"
+             mouseEnabled="false" mouseChildren="false"
+             left="{padding}" right="{padding}" top="0" bottom="0"
+             includeIn="normalWithPrompt,disabledWithPrompt"/>
+
+</s:SparkSkin>

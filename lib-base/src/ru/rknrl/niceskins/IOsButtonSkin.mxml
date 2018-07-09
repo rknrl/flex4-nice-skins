@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<s:SparkButtonSkin xmlns:fx="http://ns.adobe.com/mxml/2009"
+                   xmlns:s="library://ns.adobe.com/flex/spark"
+                   alpha.up="1"
+                   alpha.over="1"
+                   alpha.down="1"
+                   alpha.disabled="0.3">
+
+    <fx:Metadata>[HostComponent("spark.components.Button")]</fx:Metadata>
+
+    <fx:Script><![CDATA[
+        override protected function initializationComplete():void {
+            hostComponent.useHandCursor = true;
+            hostComponent.buttonMode = true;
+            super.initializationComplete();
+        }
+
+        override public function beginHighlightBitmapCapture():Boolean {
+            const needUpdate:Boolean = super.beginHighlightBitmapCapture();
+            graphics.beginFill(0);
+            graphics.drawRoundRect(0, 0, width - 1, height - 1, 2, 2);
+            graphics.endFill();
+            return needUpdate;
+        }
+
+        override public function endHighlightBitmapCapture():Boolean {
+            const needUpdate:Boolean = super.endHighlightBitmapCapture();
+            graphics.clear();
+            fill.invalidateDisplayList();
+            return needUpdate;
+        }
+
+        override protected function updateDisplayList(unscaledWidth:Number, unscaledHeight:Number):void {
+            super.updateDisplayList(unscaledWidth, unscaledHeight);
+
+            const label:Label = Label(labelDisplay);
+            const c:uint = getStyle("color");
+
+            if (label.getStyle("color") != c) {
+                label.setStyle("color", c)
+            }
+        }
+        ]]></fx:Script>
+
+    <s:states>
+        <s:State name="up" id="stateUp"/>
+        <s:State name="over" id="stateOver"/>
+        <s:State name="down" id="stateDown"/>
+        <s:State name="disabled" id="stateDisabled"/>
+    </s:states>
+
+    <s:Rect id="fill" left="0" right="0" top="0" bottom="0">
+        <s:fill>
+            <s:SolidColor id="white" alpha="0"/>
+        </s:fill>
+    </s:Rect>
+
+    <s:Label id="labelDisplay"
+             color="0x007aff"
+             left="0" right="0"
+             verticalCenter="0"
+             fontWeight="normal"
+             textAlign="center"
+             maxDisplayedLines="1"/>
+</s:SparkButtonSkin>

@@ -24,6 +24,11 @@ s|NumericStepper {
     fontSize: 12;
 }
 
+s|List {
+    skinClass: ClassReference("ru.rknrl.niceskins.ListSkin");
+    fontSize: 12;
+}
+
 s|DataGrid {
     skinClass: ClassReference("ru.rknrl.niceskins.DataGridSkin");
     fontSize: 12;
